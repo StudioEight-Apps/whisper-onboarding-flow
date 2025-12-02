@@ -1,8 +1,10 @@
+import { ChevronRight } from 'lucide-react';
 import { IPhoneMockup } from './IPhoneMockup';
 import widgetBgDeepreds from '@/assets/widget-bg-deepreds.png';
 import widgetBgAmberforest from '@/assets/widget-bg-amberforest.png';
 import widgetBgForest from '@/assets/widget-bg-forest.png';
 import homescreenWallpaper from '@/assets/homescreen-wallpaper.webp';
+import whisperWidgetLogo from '@/assets/whisper-widget-logo.png';
 
 export const HomeScreenWidget = () => {
   return (
@@ -38,21 +40,21 @@ export const HomeScreenWidget = () => {
           <div className="flex h-6 w-6 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm">
             <span className="text-lg leading-none text-white">+</span>
           </div>
-          <span className="text-sm font-medium" style={{ color: '#FF9500' }}>Done</span>
+          <span className="text-sm font-medium text-white/70">Done</span>
         </div>
 
         {/* Widgets */}
         <div className="space-y-3 px-4 pt-2">
           {/* Large Widget */}
           <div 
-            className="relative overflow-hidden rounded-2xl p-4"
+            className="relative overflow-hidden rounded-2xl p-4 text-center"
             style={{ 
               backgroundImage: `url(${widgetBgDeepreds})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}
           >
-            <span className="mb-1 block font-sans text-[10px] font-medium uppercase tracking-wider text-white/80">Whisper</span>
+            <img src={whisperWidgetLogo} alt="Whisper" className="mx-auto mb-2 h-4 w-auto opacity-80" />
             <p className="font-serif text-[15px] font-medium leading-snug text-white">
               You have yet to meet everyone who is going to love you in this life.
             </p>
@@ -61,30 +63,39 @@ export const HomeScreenWidget = () => {
           {/* Small Widgets Row */}
           <div className="flex gap-3">
             <div 
-              className="flex-1 overflow-hidden rounded-2xl p-3"
+              className="flex-1 overflow-hidden rounded-2xl p-3 text-center"
               style={{ 
                 backgroundImage: `url(${widgetBgForest})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center'
               }}
             >
-              <span className="mb-1 block font-sans text-[8px] font-medium uppercase tracking-wider text-white/80">Whisper</span>
+              <img src={whisperWidgetLogo} alt="Whisper" className="mx-auto mb-1 h-3 w-auto opacity-80" />
               <p className="font-serif text-[11px] font-medium leading-tight text-white">
                 Create more than you consume.
               </p>
             </div>
             <div 
-              className="flex-1 overflow-hidden rounded-2xl p-3"
+              className="flex-1 overflow-hidden rounded-2xl p-3 text-center"
               style={{ 
                 backgroundImage: `url(${widgetBgAmberforest})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center'
               }}
             >
-              <span className="mb-1 block font-sans text-[8px] font-medium uppercase tracking-wider text-white/80">Whisper</span>
+              <img src={whisperWidgetLogo} alt="Whisper" className="mx-auto mb-1 h-3 w-auto opacity-80" />
               <p className="font-serif text-[11px] font-medium leading-tight text-white">
                 Do not give bad thoughts room to stick around.
               </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom fade and arrow */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/90 to-transparent">
+          <div className="absolute bottom-4 right-4">
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-purple">
+              <ChevronRight className="h-6 w-6 text-white" />
             </div>
           </div>
         </div>
