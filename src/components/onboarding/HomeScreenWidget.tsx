@@ -7,7 +7,7 @@ import whisperWidgetLogo from '@/assets/whisper-widget-logo.png';
 
 export const HomeScreenWidget = () => {
   return (
-    <IPhoneMockup>
+    <IPhoneMockup fadeBottom>
       <div 
         className="relative h-[560px]"
         style={{ 
@@ -89,9 +89,6 @@ export const HomeScreenWidget = () => {
             </div>
           </div>
         </div>
-
-        {/* Bottom fade to black - complete fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black via-black to-transparent" />
       </div>
     </IPhoneMockup>
   );

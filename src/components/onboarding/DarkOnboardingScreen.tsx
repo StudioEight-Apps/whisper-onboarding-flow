@@ -24,7 +24,7 @@ export const DarkOnboardingScreen = ({
   onBack,
 }: DarkOnboardingScreenProps) => {
   return (
-    <div className="flex min-h-screen flex-col bg-background-dark">
+    <div className="relative flex min-h-screen flex-col bg-background-dark">
       {/* Back button */}
       <div className="px-6 pt-8">
         <button 
@@ -52,29 +52,31 @@ export const DarkOnboardingScreen = ({
         </div>
       </div>
 
-      {/* Bottom */}
-      <div className="px-6 pb-10">
-        {buttonStyle === 'arrow' ? (
-          <div className="mb-6 flex justify-end">
-            <button
-              onClick={onNext}
-              className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-purple transition-opacity hover:opacity-80"
-            >
-              <ChevronRight className="h-6 w-6 text-white" />
-            </button>
-          </div>
-        ) : (
+      {/* Arrow button - absolute bottom right */}
+      {buttonStyle === 'arrow' && (
+        <button
+          onClick={onNext}
+          className="absolute bottom-24 right-6 flex h-12 w-12 items-center justify-center rounded-full bg-brand-purple transition-opacity hover:opacity-80"
+        >
+          <ChevronRight className="h-6 w-6 text-white" />
+        </button>
+      )}
+
+      {/* Full width button */}
+      {buttonStyle === 'full' && (
+        <div className="px-6 pb-10">
           <button
             onClick={onNext}
             className="mb-6 w-full rounded-full bg-primary-foreground py-4 font-sans text-[16px] font-medium text-background-dark transition-opacity hover:opacity-90"
           >
             Continue
           </button>
-        )}
-        
-        <div className="flex justify-center">
-          <PaginationDots total={totalScreens} current={currentScreen} isDark />
         </div>
+      )}
+
+      {/* Pagination dots */}
+      <div className="absolute bottom-10 left-0 right-0 flex justify-center">
+        <PaginationDots total={totalScreens} current={currentScreen} isDark />
       </div>
     </div>
   );
