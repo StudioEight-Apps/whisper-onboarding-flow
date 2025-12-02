@@ -48,11 +48,13 @@ const darkScreens = [
     heading: "Add our smart widget to your home screen",
     body: "On your Home Screen, press and hold a blank space, then tap the + icon.",
     mockup: <HomeScreenWidget />,
+    buttonStyle: 'arrow' as const,
   },
   {
     heading: "Receive whispers without needing to unlock your phone",
-    body: "Set up widgets to display them on your phone's Lock Screen.",
+    body: "On your Lock Screen, press and hold a blank space, then tap customize.",
     mockup: <LockScreenWidget />,
+    buttonStyle: 'full' as const,
   },
 ];
 
