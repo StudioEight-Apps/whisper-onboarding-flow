@@ -16,22 +16,9 @@ export const HomeScreenWidget = () => {
           backgroundPosition: 'center'
         }}
       >
-        {/* Status bar */}
-        <div className="flex h-12 items-center justify-between px-6 pt-2">
-          <div className="flex items-center gap-1">
-            <span className="text-xs font-medium text-white">9:41</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <div className="flex gap-0.5">
-              <div className="h-2.5 w-0.5 rounded-full bg-white" />
-              <div className="h-3 w-0.5 rounded-full bg-white" />
-              <div className="h-3.5 w-0.5 rounded-full bg-white" />
-              <div className="h-4 w-0.5 rounded-full bg-white" />
-            </div>
-            <div className="ml-1 h-3 w-6 rounded-sm border border-white">
-              <div className="m-0.5 h-2 w-4 rounded-sm bg-white" />
-            </div>
-          </div>
+        {/* Status bar - time only */}
+        <div className="flex h-12 items-center justify-center px-6 pt-2">
+          <span className="text-xs font-medium text-white">9:41</span>
         </div>
         
         {/* Edit mode header */}
@@ -46,14 +33,15 @@ export const HomeScreenWidget = () => {
         <div className="space-y-3 px-4 pt-2">
           {/* Large Widget */}
           <div 
-            className="relative overflow-hidden rounded-2xl p-4 text-center"
+            className="flex flex-col items-center justify-center overflow-hidden rounded-2xl p-4 text-center"
             style={{ 
               backgroundImage: `url(${widgetBgDeepreds})`,
               backgroundSize: 'cover',
-              backgroundPosition: 'center'
+              backgroundPosition: 'center',
+              minHeight: '100px'
             }}
           >
-            <img src={whisperWidgetLogo} alt="Whisper" className="mx-auto mb-2 h-3 w-auto opacity-80" />
+            <img src={whisperWidgetLogo} alt="Whisper" className="mb-2 h-3 w-auto opacity-80" />
             <p className="font-serif text-[14px] font-medium leading-snug text-white">
               You have yet to meet everyone who is going to love you in this life.
             </p>
@@ -62,27 +50,27 @@ export const HomeScreenWidget = () => {
           {/* Small Widgets Row - Square */}
           <div className="flex gap-3">
             <div 
-              className="aspect-square flex-1 overflow-hidden rounded-2xl p-3 text-center"
+              className="flex aspect-square flex-1 flex-col items-center justify-center overflow-hidden rounded-2xl p-3 text-center"
               style={{ 
                 backgroundImage: `url(${widgetBgForest})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center'
               }}
             >
-              <img src={whisperWidgetLogo} alt="Whisper" className="mx-auto mb-1 h-2.5 w-auto opacity-80" />
+              <img src={whisperWidgetLogo} alt="Whisper" className="mb-1 h-2.5 w-auto opacity-80" />
               <p className="font-serif text-[10px] font-medium leading-tight text-white">
                 Create more than you consume.
               </p>
             </div>
             <div 
-              className="aspect-square flex-1 overflow-hidden rounded-2xl p-3 text-center"
+              className="flex aspect-square flex-1 flex-col items-center justify-center overflow-hidden rounded-2xl p-3 text-center"
               style={{ 
                 backgroundImage: `url(${widgetBgAmberforest})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center'
               }}
             >
-              <img src={whisperWidgetLogo} alt="Whisper" className="mx-auto mb-1 h-2.5 w-auto opacity-80" />
+              <img src={whisperWidgetLogo} alt="Whisper" className="mb-1 h-2.5 w-auto opacity-80" />
               <p className="font-serif text-[10px] font-medium leading-tight text-white">
                 Do not give bad thoughts room to stick around.
               </p>
