@@ -2,9 +2,10 @@ import { ReactNode } from 'react';
 
 interface IPhoneMockupProps {
   children: ReactNode;
+  fadeBottom?: boolean;
 }
 
-export const IPhoneMockup = ({ children }: IPhoneMockupProps) => {
+export const IPhoneMockup = ({ children, fadeBottom = false }: IPhoneMockupProps) => {
   return (
     <div className="relative mx-auto w-[280px]">
       {/* iPhone Frame */}
@@ -20,6 +21,11 @@ export const IPhoneMockup = ({ children }: IPhoneMockupProps) => {
           {children}
         </div>
       </div>
+      
+      {/* Fade overlay covering bottom half of entire phone */}
+      {fadeBottom && (
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/95 to-transparent" />
+      )}
     </div>
   );
 };
