@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { ChevronLeft } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { PaginationDots } from './PaginationDots';
 
 interface DarkOnboardingScreenProps {
@@ -8,6 +8,7 @@ interface DarkOnboardingScreenProps {
   mockup: ReactNode;
   currentScreen: number;
   totalScreens: number;
+  buttonStyle?: 'full' | 'arrow';
   onNext: () => void;
   onBack: () => void;
 }
@@ -18,6 +19,7 @@ export const DarkOnboardingScreen = ({
   mockup,
   currentScreen,
   totalScreens,
+  buttonStyle = 'full',
   onNext,
   onBack,
 }: DarkOnboardingScreenProps) => {
@@ -52,12 +54,24 @@ export const DarkOnboardingScreen = ({
 
       {/* Bottom */}
       <div className="px-6 pb-10">
-        <button
-          onClick={onNext}
-          className="mb-6 w-full rounded-full bg-primary-foreground py-4 font-sans text-[16px] font-medium text-background-dark transition-opacity hover:opacity-90"
-        >
-          Continue
-        </button>
+        {buttonStyle === 'arrow' ? (
+          <div className="mb-6 flex justify-end">
+            <button
+              onClick={onNext}
+              className="flex items-center gap-1 font-sans text-[16px] font-medium text-primary-foreground transition-opacity hover:opacity-70"
+            >
+              Continue
+              <ChevronRight className="h-5 w-5" />
+            </button>
+          </div>
+        ) : (
+          <button
+            onClick={onNext}
+            className="mb-6 w-full rounded-full bg-primary-foreground py-4 font-sans text-[16px] font-medium text-background-dark transition-opacity hover:opacity-90"
+          >
+            Continue
+          </button>
+        )}
         
         <div className="flex justify-center">
           <PaginationDots total={totalScreens} current={currentScreen} isDark />
