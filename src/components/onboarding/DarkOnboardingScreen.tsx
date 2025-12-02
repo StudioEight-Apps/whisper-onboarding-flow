@@ -58,10 +58,9 @@ export const DarkOnboardingScreen = ({
           <div className="mb-6 flex justify-end">
             <button
               onClick={onNext}
-              className="flex items-center gap-1 font-sans text-[16px] font-medium text-primary-foreground transition-opacity hover:opacity-70"
+              className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-purple transition-opacity hover:opacity-80"
             >
-              Continue
-              <ChevronRight className="h-5 w-5" />
+              <ChevronRight className="h-6 w-6 text-white" />
             </button>
           </div>
         ) : (
