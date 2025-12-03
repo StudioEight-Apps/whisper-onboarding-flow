@@ -3,16 +3,16 @@ import widgetBgAmberforest from '@/assets/widget-bg-amberforest.png';
 
 export const LockScreenWidget = () => {
   return (
-    <IPhoneMockup>
+    <IPhoneMockup fadeBottom>
       <div className="relative h-[560px] bg-gradient-to-b from-[#1a1a2e] to-[#0f0f1a]">
-        {/* Lock screen time */}
-        <div className="flex flex-col items-center pt-16">
-          <span className="text-[72px] font-light leading-none tracking-tight text-white">9:41</span>
-          <span className="mt-1 text-sm font-medium text-white/70">Monday, December 2</span>
+        {/* Lock screen date and time */}
+        <div className="flex flex-col items-center pt-12">
+          <span className="text-lg font-normal text-white/70">Monday, December 2</span>
+          <span className="text-[80px] font-light leading-none tracking-tight text-white/80">9:41</span>
         </div>
 
-        {/* Whisper Widget */}
-        <div className="mt-8 px-6">
+        {/* Whisper Widget - text-based lock screen style */}
+        <div className="mt-6 px-6">
           <div 
             className="overflow-hidden rounded-2xl p-4"
             style={{ 
@@ -21,7 +21,7 @@ export const LockScreenWidget = () => {
               backgroundPosition: 'center'
             }}
           >
-            <span className="mb-1 block font-sans text-[10px] font-medium uppercase tracking-wider text-white/80">Whisper</span>
+            <span className="mb-1 block font-sans text-[10px] font-semibold uppercase tracking-wider text-white/90">Whisper</span>
             <p className="font-serif text-[15px] font-medium leading-snug text-white">
               Your vision is real; keep moving one step at a time.
             </p>
