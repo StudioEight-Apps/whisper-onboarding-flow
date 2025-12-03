@@ -69,7 +69,7 @@ export const DarkOnboardingScreen = ({
             onClick={onNext}
             className="mb-6 w-full rounded-full bg-primary-foreground py-4 font-sans text-[16px] font-medium text-background-dark transition-opacity hover:opacity-90"
           >
-            Start Journaling
+            Continue
           </button>
         </div>
       )}
