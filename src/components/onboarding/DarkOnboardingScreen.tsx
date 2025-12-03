@@ -24,9 +24,9 @@ export const DarkOnboardingScreen = ({
   onBack,
 }: DarkOnboardingScreenProps) => {
   return (
-    <div className="relative flex min-h-screen flex-col bg-background-dark">
+    <div className="relative flex h-screen flex-col bg-background-dark overflow-hidden">
       {/* Back button */}
-      <div className="px-6 pt-8">
+      <div className="shrink-0 px-6 pt-8">
         <button 
           onClick={onBack}
           className="flex h-10 w-10 items-center justify-center text-brand-purple transition-opacity hover:opacity-70"
@@ -36,8 +36,8 @@ export const DarkOnboardingScreen = ({
       </div>
 
       {/* Content */}
-      <div className="flex flex-1 flex-col px-6 pt-2">
-        <div className="max-w-[360px]">
+      <div className="flex min-h-0 flex-1 flex-col px-6 pt-2">
+        <div className="shrink-0 max-w-[360px]">
           <h1 className="font-serif text-[21px] font-semibold leading-tight tracking-tight text-primary-foreground">
             {heading}
           </h1>
@@ -47,13 +47,13 @@ export const DarkOnboardingScreen = ({
         </div>
 
         {/* Mockup */}
-        <div className="flex flex-1 items-center justify-center py-4">
+        <div className="flex min-h-0 flex-1 items-center justify-center py-4">
           {mockup}
         </div>
       </div>
 
       {/* Full width Continue button at bottom */}
-      <div className="px-6 pb-8">
+      <div className="shrink-0 px-6 pb-8">
         <button
           onClick={onNext}
           className="w-full rounded-full bg-primary-foreground py-4 font-sans text-[16px] font-medium text-background-dark transition-opacity hover:opacity-90"
