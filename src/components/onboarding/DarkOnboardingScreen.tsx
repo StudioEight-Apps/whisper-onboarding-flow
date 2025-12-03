@@ -56,7 +56,7 @@ export const DarkOnboardingScreen = ({
       {buttonStyle === 'arrow' && (
         <button
           onClick={onNext}
-          className="absolute bottom-32 right-6 flex h-12 w-12 items-center justify-center rounded-full bg-brand-purple transition-opacity hover:opacity-80"
+          className="absolute bottom-12 right-6 flex h-12 w-12 items-center justify-center rounded-full bg-brand-purple transition-opacity hover:opacity-80"
         >
           <ChevronRight className="h-6 w-6 text-white" />
         </button>
