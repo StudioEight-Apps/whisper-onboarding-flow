@@ -2,7 +2,7 @@ import { IPhoneMockup } from './IPhoneMockup';
 import widgetBgDeepreds from '@/assets/widget-bg-deepreds.png';
 import widgetBgAmberforest from '@/assets/widget-bg-amberforest.png';
 import widgetBgForest from '@/assets/widget-bg-forest.png';
-import homescreenWallpaper from '@/assets/homescreen-wallpaper.webp';
+import homescreenWallpaper from '@/assets/homescreen-wallpaper-gradient.png';
 import whisperWidgetLogo from '@/assets/whisper-widget-logo.png';
 
 export const HomeScreenWidget = () => {
