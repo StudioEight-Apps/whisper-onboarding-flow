@@ -1,29 +1,30 @@
 import { IPhoneMockup } from './IPhoneMockup';
-import widgetBgAmberforest from '@/assets/widget-bg-amberforest.png';
 
 export const LockScreenWidget = () => {
   return (
     <IPhoneMockup fadeBottom>
-      <div className="relative h-[560px] bg-gradient-to-b from-[#1a1a2e] to-[#0f0f1a]">
-        {/* Lock screen date and time */}
-        <div className="flex flex-col items-center pt-12">
-          <span className="text-lg font-normal text-white/70">Monday, December 2</span>
-          <span className="text-[80px] font-light leading-none tracking-tight text-white/80">9:41</span>
+      <div className="relative h-[560px] bg-[#0a0a0a]">
+        {/* Date header with app name */}
+        <div className="flex items-center justify-center gap-2 pt-10">
+          <span className="rounded-full border border-white/20 px-3 py-1 text-[11px] text-white/70">Mon 2</span>
+          <span className="text-[11px] font-medium text-white/90">Your Whispers</span>
         </div>
 
-        {/* Whisper Widget - text-based lock screen style */}
-        <div className="mt-6 px-6">
-          <div 
-            className="overflow-hidden rounded-2xl p-4"
-            style={{ 
-              backgroundImage: `url(${widgetBgAmberforest})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center'
-            }}
-          >
-            <span className="mb-1 block font-sans text-[10px] font-semibold uppercase tracking-wider text-white/90">Whisper</span>
-            <p className="font-serif text-[15px] font-medium leading-snug text-white">
-              Your vision is real; keep moving one step at a time.
+        {/* Lock screen time */}
+        <div className="flex flex-col items-center pt-2">
+          <span className="text-[72px] font-light leading-none tracking-tight text-white/60">9:41</span>
+        </div>
+
+        {/* Widget placeholders below time */}
+        <div className="mt-4 flex justify-center gap-3 px-6">
+          <div className="flex-1 rounded-2xl border border-white/20 bg-white/5 px-3 py-3">
+            <p className="text-center text-[11px] leading-tight text-white/70">
+              Your whisper<br />will go here
+            </p>
+          </div>
+          <div className="flex-1 rounded-2xl border border-white/20 bg-white/5 px-3 py-3">
+            <p className="text-center text-[11px] leading-tight text-white/70">
+              Your whisper<br />will go here
             </p>
           </div>
         </div>
