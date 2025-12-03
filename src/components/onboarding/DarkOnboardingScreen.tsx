@@ -52,29 +52,14 @@ export const DarkOnboardingScreen = ({
         </div>
       </div>
 
-      {/* Arrow button - absolute bottom right */}
-      {buttonStyle === 'arrow' && (
+      {/* Full width Continue button at bottom */}
+      <div className="px-6 pb-8">
         <button
           onClick={onNext}
-          className="absolute bottom-12 right-6 flex h-12 w-12 items-center justify-center rounded-full bg-brand-purple transition-opacity hover:opacity-80"
-        >
-          <ChevronRight className="h-6 w-6 text-white" />
-        </button>
-      )}
-
-      {/* Full width button - always visible at bottom */}
-      <div className="px-6 pb-10">
-        <button
-          onClick={onNext}
-          className="mb-6 w-full rounded-full bg-primary-foreground py-4 font-sans text-[16px] font-medium text-background-dark transition-opacity hover:opacity-90"
+          className="w-full rounded-full bg-primary-foreground py-4 font-sans text-[16px] font-medium text-background-dark transition-opacity hover:opacity-90"
         >
           Continue
         </button>
-      </div>
-
-      {/* Pagination dots */}
-      <div className="absolute bottom-10 left-0 right-0 flex justify-center">
-        <PaginationDots total={totalScreens} current={currentScreen} isDark />
       </div>
     </div>
   );
