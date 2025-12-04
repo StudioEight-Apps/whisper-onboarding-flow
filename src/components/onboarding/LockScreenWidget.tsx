@@ -22,9 +22,9 @@ export const LockScreenWidget = () => {
           <span className="text-[72px] font-light leading-none tracking-tight text-white">9:41</span>
         </div>
 
-        {/* Single widget below time - aligned left */}
-        <div className="mt-4 px-6">
-          <div className="inline-block rounded-2xl border border-white/20 bg-white/10 px-4 py-3">
+        {/* Single widget below time */}
+        <div className="mt-4 flex justify-center px-6">
+          <div className="rounded-2xl border border-white/20 bg-white/10 px-4 py-3">
             <p className="text-center text-[11px] leading-tight text-white/90">
               Bad day or<br />bad moment?
             </p>

@@ -62,15 +62,17 @@ export const DarkOnboardingScreen = ({
         </button>
       )}
 
-      {/* Full width button - always visible at bottom */}
-      <div className="px-6 pb-10">
-        <button
-          onClick={onNext}
-          className="mb-6 w-full rounded-full bg-primary-foreground py-4 font-sans text-[16px] font-medium text-background-dark transition-opacity hover:opacity-90"
-        >
-          Continue
-        </button>
-      </div>
+      {/* Full width button */}
+      {buttonStyle === 'full' && (
+        <div className="px-6 pb-10">
+          <button
+            onClick={onNext}
+            className="mb-6 w-full rounded-full bg-primary-foreground py-4 font-sans text-[16px] font-medium text-background-dark transition-opacity hover:opacity-90"
+          >
+            Continue
+          </button>
+        </div>
+      )}
 
       {/* Pagination dots */}
       <div className="absolute bottom-10 left-0 right-0 flex justify-center">
